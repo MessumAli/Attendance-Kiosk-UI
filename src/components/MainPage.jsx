@@ -103,7 +103,7 @@ const MainPage = () => {
           <input
             ref={inputRef}
             type="text"
-            // className="invisible"
+            className="invisible"
             placeholder="Scan RFID"
             value={rfId}
             onChange={(e) => setRFID(e.target.value)}
@@ -111,15 +111,15 @@ const MainPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-20">
-        <div className="ml-36 flex flex-col ">
+      <div className="flex md:flex-col lg:flex-row justify-between items-center md:mt-52 lg:mt-20">
+        <div className="md:mr-44 lg:ml-36 flex flex-col ">
           <p className="text-white text-7xl">Welcome to </p>
           <p className="mt-5 text-7xl animate-typing overflow-hidden text-lime-500 font-bold">
             Symtera!
           </p>
 
           <select
-            className="border border-gray-300 p-2 mx-4 my-10 w-72"
+            className="border border-gray-300 p-2 mx-4 my-10 md:w-96 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -146,7 +146,9 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="mt-32 text-white text-5xl text-center">{currentDateTime}</p>
+      <p className="md:mt-[200px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
+        {currentDateTime}
+      </p>
       {/* {logImg && (
         <div className="mt-5">
           <p className="text-white text-lg">Captured Image:</p>
