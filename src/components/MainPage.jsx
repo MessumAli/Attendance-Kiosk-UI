@@ -121,13 +121,13 @@ const MainPage = () => {
       <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-28 lg:mt-20">
         <div className="flex flex-col md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
-          <p className="mt-5 overflow-hidden text-5xl font-bold animate-typing text-lime-500">
+          <p className="pb-2 mt-5 overflow-hidden text-5xl font-bold animate-typing text-lime-500">
             Symtera&nbsp;Technologies
           </p>
 
           {/* <div className="w-auto"> */}
           <select
-            className="p-2 mx-4 mt-10 border text-4xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
+            className="p-2 mx-4 mt-10 border text-3xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -149,7 +149,7 @@ const MainPage = () => {
             screenshotFormat="image/jpeg"
             videoConstraints={{
               facingMode: "user",
-              width: 300,
+              width: 250,
               height: 400,
             }}
             ref={webcamRef}
@@ -157,10 +157,10 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="sm:mt-[150px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
+      <p className="sm:mt-[0px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
         {currentTime}
       </p>
-      <p className="sm:mt-[50px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
+      <p className="sm:mt-[30px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
         {currentDate}
       </p>
       {/* {logImg && (
