@@ -121,13 +121,13 @@ const MainPage = () => {
       <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-36 lg:mt-20">
         <div className="flex flex-col md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
-          <p className="mt-5 overflow-hidden text-6xl font-bold animate-typing text-lime-500">
+          <p className="mt-5 overflow-hidden text-5xl font-bold animate-typing text-lime-500">
             Symtera&nbsp;Technologies
           </p>
 
           {/* <div className="w-auto"> */}
           <select
-            className="p-2 mx-4 my-10 border text-5xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
+            className="p-2 mx-4 my-10 border text-4xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -140,10 +140,7 @@ const MainPage = () => {
           </select>
           {/* </div> */}
         </div>
-        <div
-          className="z-10 sm:mr-80 sm:mt-10"
-          style={{ transform: `rotate(-90deg)` }}
-        >
+        <div className="z-10 " style={{ transform: `rotate(-90deg)` }}>
           <Webcam
             className="rounded-xl"
             audio={false}
@@ -153,7 +150,7 @@ const MainPage = () => {
             videoConstraints={{
               facingMode: "user",
               width: 300,
-              height: 600,
+              height: 400,
             }}
             ref={webcamRef}
           />
