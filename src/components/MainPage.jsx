@@ -80,7 +80,7 @@ const MainPage = () => {
   }, [delayedHandleRFIDScanned]);
 
   return (
-    <div className="h-screen bg-black relative">
+    <div className="relative h-screen bg-black">
       <div className="relative">
         <img
           className="fixed top-[-80px] right-[-90px] w-72"
@@ -96,7 +96,7 @@ const MainPage = () => {
         />
       </div>
       <div className="flex">
-        <div className="w-72 p-4">
+        <div className="p-4 w-72">
           <img src={Logo} alt="" />
         </div>
         <div>
@@ -111,15 +111,15 @@ const MainPage = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-col lg:flex-row justify-between items-center md:mt-52 lg:mt-20">
-        <div className="md:mr-44 lg:ml-36 flex flex-col ">
+      <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-36 lg:mt-20">
+        <div className="flex flex-col sm:mr-56 md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
-          <p className="mt-5 text-7xl animate-typing overflow-hidden text-lime-500 font-bold">
+          <p className="mt-5 overflow-hidden font-bold text-7xl animate-typing text-lime-500">
             Symtera!
           </p>
 
           <select
-            className="border border-gray-300 p-2 mx-4 my-10 md:w-96 lg:w-72"
+            className="p-2 mx-4 my-10 border border-gray-300 md:w-96 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -131,7 +131,7 @@ const MainPage = () => {
             <option value="Officially-Log-In">Officially-Log-In</option>
           </select>
         </div>
-        <div className="mr-48 z-10">
+        <div className="z-10 mr-56">
           <Webcam
             className="rounded-xl"
             audio={false}
@@ -146,12 +146,12 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="md:mt-[200px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
+      <p className="sm:mt-[250px] md:mt-[200px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
         {currentDateTime}
       </p>
       {/* {logImg && (
         <div className="mt-5">
-          <p className="text-white text-lg">Captured Image:</p>
+          <p className="text-lg text-white">Captured Image:</p>
           <img src={logImg} alt="Captured" className="rounded-lg" />
         </div>
       )} */}
