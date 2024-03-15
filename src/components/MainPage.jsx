@@ -107,7 +107,7 @@ const MainPage = () => {
         />
       </div>
       <div className="flex">
-        <div className="p-4 w-72">
+        <div className="p-4 w-96">
           <img src={Logo} alt="" />
         </div>
         <div>
