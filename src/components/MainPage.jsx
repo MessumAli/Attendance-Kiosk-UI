@@ -97,7 +97,7 @@ const MainPage = () => {
       </div>
       <div className="relative">
         <img
-          className="fixed bottom-[-110px] left-[-100px] w-72"
+          className="fixed bottom-[-160px] left-[-100px] w-72"
           src={Blue}
           alt=""
         />
@@ -160,7 +160,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="sm:mt-[-50px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
+      <p className="sm:mt-[-70px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
         {currentTime}
       </p>
       <p className="sm:mt-[30px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
