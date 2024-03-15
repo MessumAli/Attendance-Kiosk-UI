@@ -9,7 +9,8 @@ import Blue from "../assets/blue.png";
 const MainPage = () => {
   const [rfId, setRFID] = useState("Log-In");
   const [attendanceLog, setAttendanceLog] = useState("Log-In");
-  const [currentDateTime, setCurrentDateTime] = useState("");
+  const [currentTime, setCurrentTime] = useState("");
+  const [currentDate, setCurrentDate] = useState("");
   // const [logImg, setLogImg] = useState(null);
   const inputRef = useRef(null);
   const webcamRef = useRef(null);
@@ -61,16 +62,22 @@ const MainPage = () => {
 
     const intervalId = setInterval(() => {
       const now = new Date();
-      const options = {
+      const options1 = {
+        hour: "numeric",
+        minute: "2-digit",
+      };
+      const options2 = {
         weekday: "long",
         year: "numeric",
         month: "long",
         day: "numeric",
-        hour: "numeric",
-        minute: "2-digit",
+        // hour: "numeric",
+        // minute: "2-digit",
       };
-      const formattedDateTime = now.toLocaleDateString("en-US", options);
-      setCurrentDateTime(formattedDateTime);
+      const formattedTime = now.toLocaleTimeString("en-US", options1);
+      const formattedDate = now.toLocaleDateString("en-US", options2);
+      setCurrentTime(formattedTime);
+      setCurrentDate(formattedDate);
     }, 1000);
 
     return () => {
@@ -112,14 +119,15 @@ const MainPage = () => {
       </div>
 
       <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-36 lg:mt-20">
-        <div className="flex flex-col sm:mr-56 md:mr-44 lg:ml-36 ">
+        <div className="flex flex-col md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
-          <p className="mt-5 overflow-hidden font-bold text-7xl animate-typing text-lime-500">
-            Symtera!
+          <p className="mt-5 overflow-hidden text-6xl font-bold animate-typing text-lime-500">
+            Symtera&nbsp;Technologies
           </p>
 
+          {/* <div className="w-auto"> */}
           <select
-            className="p-2 mx-4 my-10 border border-gray-300 md:w-96 lg:w-72"
+            className="p-2 mx-4 my-10 border text-5xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -130,6 +138,7 @@ const MainPage = () => {
             <option value="Officially-Log-Out">Officially-Log-Out</option>
             <option value="Officially-Log-In">Officially-Log-In</option>
           </select>
+          {/* </div> */}
         </div>
         <div
           className="z-10 sm:mr-80 sm:mt-10"
@@ -139,18 +148,23 @@ const MainPage = () => {
             className="rounded-xl"
             audio={false}
             height={200}
-            width={400}
+            width={500}
             screenshotFormat="image/jpeg"
             videoConstraints={{
               facingMode: "user",
+              width: 300,
+              height: 600,
             }}
             ref={webcamRef}
           />
         </div>
       </div>
 
-      <p className="sm:mt-[150px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
-        {currentDateTime}
+      <p className="sm:mt-[150px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
+        {currentTime}
+      </p>
+      <p className="sm:mt-[50px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
+        {currentDate}
       </p>
       {/* {logImg && (
         <div className="mt-5">
