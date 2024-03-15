@@ -131,7 +131,8 @@ const MainPage = () => {
             <option value="Officially-Log-In">Officially-Log-In</option>
           </select>
         </div>
-        <div className="z-10 mr-56">
+        <div className="z-10 mr-56" style={{ transform: `rotate(-90deg)` }}
+>
           <Webcam
             className="rounded-xl"
             audio={false}
@@ -146,7 +147,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="sm:mt-[250px] md:mt-[200px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
+      <p className="sm:mt-[200px] lg:mt-32 text-white font-bold text-4xl lg:text-5xl text-center">
         {currentDateTime}
       </p>
       {/* {logImg && (
