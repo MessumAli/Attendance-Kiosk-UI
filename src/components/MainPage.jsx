@@ -118,7 +118,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-36 lg:mt-20">
+      <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-28 lg:mt-20">
         <div className="flex flex-col md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
           <p className="mt-5 overflow-hidden text-5xl font-bold animate-typing text-lime-500">
@@ -127,7 +127,7 @@ const MainPage = () => {
 
           {/* <div className="w-auto"> */}
           <select
-            className="p-2 mx-4 my-10 border text-4xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
+            className="p-2 mx-4 mt-10 border text-4xl font-bold rounded-md border-gray-300 sm:w-[650px] md:w-80 lg:w-72"
             value={attendanceLog}
             onChange={(e) => setAttendanceLog(e.target.value)}
           >
@@ -145,7 +145,7 @@ const MainPage = () => {
             className="rounded-xl"
             audio={false}
             height={200}
-            width={500}
+            width={400}
             screenshotFormat="image/jpeg"
             videoConstraints={{
               facingMode: "user",
