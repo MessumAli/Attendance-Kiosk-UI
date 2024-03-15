@@ -121,7 +121,7 @@ const MainPage = () => {
       <div className="flex items-center justify-between sm:flex-col lg:flex-row sm:mt-28 lg:mt-20">
         <div className="flex flex-col md:mr-44 lg:ml-36 ">
           <p className="text-white text-7xl">Welcome to </p>
-          <p className="pb-2 mt-5 overflow-hidden text-5xl font-bold animate-typing text-lime-500">
+          <p className="pb-2 mt-5 overflow-hidden text-6xl font-bold animate-typing text-lime-500">
             Symtera&nbsp;Technologies
           </p>
 
@@ -163,7 +163,7 @@ const MainPage = () => {
       <p className="sm:mt-[-70px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
         {currentTime}
       </p>
-      <p className="sm:mt-[30px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
+      <p className="sm:mt-[30px] lg:mt-32 text-white font-semibold text-5xl lg:text-5xl text-center">
         {currentDate}
       </p>
       {/* {logImg && (
