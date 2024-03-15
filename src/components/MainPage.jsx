@@ -90,7 +90,8 @@ const MainPage = () => {
   }, [delayedHandleRFIDScanned]);
 
   return (
-    <div className="relative h-screen bg-black">
+    // <div className="relative h-screen bg-black">
+    <div className="relative h-screen bg-gradient-to-b from-blue-900 to-blue-500">
       <div className="relative">
         <img
           className="fixed top-[-80px] right-[-90px] w-72"
@@ -129,7 +130,7 @@ const MainPage = () => {
           </p>
 
           <div className="relative">
-            <span className=" absolute top-[52px] left-[600px]">
+            <span className=" absolute top-[52px] left-[620px]">
               <FontAwesomeIcon icon={faArrowDown} size="2x" />
             </span>
             <select
