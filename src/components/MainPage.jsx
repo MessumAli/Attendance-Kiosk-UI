@@ -140,7 +140,10 @@ const MainPage = () => {
           </select>
           {/* </div> */}
         </div>
-        <div className="z-10 " style={{ transform: `rotate(-90deg)` }}>
+        <div
+          className="z-10 mt-[-80px]"
+          style={{ transform: `rotate(-90deg)` }}
+        >
           <Webcam
             className="rounded-xl"
             audio={false}
@@ -157,7 +160,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <p className="sm:mt-[0px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
+      <p className="sm:mt-[-50px] lg:mt-32 text-white font-bold text-7xl lg:text-5xl text-center">
         {currentTime}
       </p>
       <p className="sm:mt-[30px] lg:mt-32 text-white font-bold text-6xl lg:text-5xl text-center">
